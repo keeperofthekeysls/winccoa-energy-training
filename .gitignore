@@ -1,0 +1,14 @@
+# Internal references
+**/_refs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Temp
+*.log
+*.tmp
