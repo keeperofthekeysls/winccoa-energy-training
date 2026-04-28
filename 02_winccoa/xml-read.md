@@ -52,17 +52,29 @@ unsigned	node	Идентификатор узла.
 
 Константа						Значение
 XML_ATTRIBUTE_NODE				Имя атрибута
+
 XML_CDATA_						SECTION_NODE	Строка "#cdata-section"
+
 XML_COMMENT_NODE				Строка "#comment"
+
 XML_DOCUMENT_NODE				Строка "#document"
+
 XML_DOCUMENT_FRAGMENT_NODE		Строка "#document-fragment"
+
 XML_DOCUMENT_TYPE_NODE			Имя типа документа
+
 XML_ELEMENT_NODE				Имя тега
+
 XML_ENTITY_NODE					Имя узла
+
 XML_ENTITY_REFERENCE_NODE		Имя узла ссылки
+
 XML_NOTATION_NODE				Имя аларма
+
 XML_PROCESSING_INSTRUCTION_NODE	Цель оператора обработки
+
 XML_TEXT_NODE					Строка "#text"
+
 
 
 __xmlGetElementAttribute()__
