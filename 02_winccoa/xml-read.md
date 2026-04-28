@@ -17,7 +17,7 @@ SCL — это XML-файл, поэтому в WinCC OA тебе нужен ра
 
 Функции WinCC OA посмотреть →
 
-*int xmlDocumentFromFile(string fileName, string &errMsg, int &errLine, int &errColumn)*
+``int xmlDocumentFromFile(string fileName, string &errMsg, int &errLine, int &errColumn)``
 
 Открывает файл и считывает в память все содержание, формирующее структуру DOM. Возвращает идентификатор документа, передаваемый в будущем для других вызовов XML. Возвращаемый идентификатор действителен до вызова xmlCloseDocument()
 ```
@@ -28,7 +28,8 @@ int xmlDocumentFromFile(string fileName, string &errMsg, int &errLine, int &errC
 	int 	errColumn	Столбец документа в котором произошла ошибка;
 ```
 
-*int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes)*
+``int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes)``
+
 записывает все дочерние узлы указанного узла в параметр ссылки узла.
 ```
 int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes);
