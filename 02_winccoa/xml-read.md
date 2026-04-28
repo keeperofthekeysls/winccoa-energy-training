@@ -1,6 +1,6 @@
 XML-парсер.
 
-SCL — это XML-файл, поэтому в WinCC OA тебе нужен разбор XML.
+SCL — это XML-файл, поэтому в WinCC OA нужен разбор XML.
 
 Что изучить:
 
@@ -17,7 +17,7 @@ SCL — это XML-файл, поэтому в WinCC OA тебе нужен ра
 
 Функции WinCC OA посмотреть →
 
-``int xmlDocumentFromFile(string fileName, string &errMsg, int &errLine, int &errColumn)``
+__int xmlDocumentFromFile(string fileName, string &errMsg, int &errLine, int &errColumn)__
 
 Открывает файл и считывает в память все содержание, формирующее структуру DOM. Возвращает идентификатор документа, передаваемый в будущем для других вызовов XML. Возвращаемый идентификатор действителен до вызова xmlCloseDocument()
 ```
@@ -28,7 +28,7 @@ int xmlDocumentFromFile(string fileName, string &errMsg, int &errLine, int &errC
 	int 	errColumn	Столбец документа в котором произошла ошибка;
 ```
 
-``int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes)``
+__int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes)__
 
 записывает все дочерние узлы указанного узла в параметр ссылки узла.
 ```
