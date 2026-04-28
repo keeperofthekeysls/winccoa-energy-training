@@ -40,9 +40,13 @@ int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes);
 Example: int k = xmlChildNodes(docNum,Pnode,nodes);
 ```
 
+__string xmlNodeName()__
+
+Возвращает имя узла.
 ```
-xmlGetNodeName()
-```
+string xmlNodeName(unsigned doc, unsigned node);
+unsigned	doc		Идентификатор документа, возвращаемый, например, xmlNewDocument().
+unsigned	node	Идентификатор узла.
 ```
 xmlGetAttribute()
 ```
@@ -57,7 +61,7 @@ xmlCloseDocument()
 Открыть SCL/XML файл	xmlDocumentFromFile()
 Получить корневой узел	xmlFirstChild(doc)
 Получить дочерние узлы	
-Получить имя узла	xmlNodeName()
+Получить имя узла	
 Получить атрибут	xmlGetElementAttribute()
 Закрыть XML-документ	xmlCloseDocument()
 
