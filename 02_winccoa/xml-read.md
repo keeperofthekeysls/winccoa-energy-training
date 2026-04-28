@@ -40,7 +40,7 @@ int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes);
 Example: int k = xmlChildNodes(docNum,Pnode,nodes);
 ```
 
-__string xmlNodeName()__
+__string xmlNodeName(unsigned doc, unsigned node)__
 
 Возвращает имя узла.
 ```
@@ -48,7 +48,24 @@ string xmlNodeName(unsigned doc, unsigned node);
 unsigned	doc		Идентификатор документа, возвращаемый, например, xmlNewDocument().
 unsigned	node	Идентификатор узла.
 ```
-xmlGetAttribute()
+Возвращает имя узла.Значение имени зависит от типа опрашиваемого узла. Все указанные имена типа узла представляют собой целочисленные константы, которые доступны в сценарии CTRL во время использования расширения "CtrlXml".Определены следующие константы типа узла:
+
+Константа						Значение
+XML_ATTRIBUTE_NODE				Имя атрибута
+XML_CDATA_						SECTION_NODE	Строка "#cdata-section"
+XML_COMMENT_NODE				Строка "#comment"
+XML_DOCUMENT_NODE				Строка "#document"
+XML_DOCUMENT_FRAGMENT_NODE		Строка "#document-fragment"
+XML_DOCUMENT_TYPE_NODE			Имя типа документа
+XML_ELEMENT_NODE				Имя тега
+XML_ENTITY_NODE					Имя узла
+XML_ENTITY_REFERENCE_NODE		Имя узла ссылки
+XML_NOTATION_NODE				Имя аларма
+XML_PROCESSING_INSTRUCTION_NODE	Цель оператора обработки
+XML_TEXT_NODE					Строка "#text"
+
+
+__xmlGetElementAttribute()__
 ```
 ```
 xmlCloseDocument()
@@ -62,7 +79,7 @@ xmlCloseDocument()
 Получить корневой узел	xmlFirstChild(doc)
 Получить дочерние узлы	
 Получить имя узла	
-Получить атрибут	xmlGetElementAttribute()
+Получить атрибут	
 Закрыть XML-документ	xmlCloseDocument()
 
 Порядок →
