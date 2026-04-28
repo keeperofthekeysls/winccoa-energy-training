@@ -21,31 +21,23 @@ int xmlDocumentFromFile(string fileName, string &errMsg, int &errLine, int &errC
 
 Открывает файл и считывает в память все содержание, формирующее структуру DOM. Возвращает идентификатор документа, передаваемый в будущем для других вызовов XML. Возвращаемый идентификатор действителен до вызова xmlCloseDocument()
 ```
-	int xmlDocumentFromFile(string fileName, string &errMsg, int &errLine, int &errColumn);
-	fileName - абсолютный путь к открываемому файлу;
-	string errMsg - Сообщение предупреждающее об ошибке;
-	int errLine - Строка документа в котором произошла ошибка;
-	int errColumn - Столбец документа в котором произошла ошибка;
+int xmlDocumentFromFile(string fileName, string &errMsg, int &errLine, int &errColumn);
+	string	fileName	абсолютный путь к открываемому файлу;
+	string	errMsg		Сообщение предупреждающее об ошибке;
+	int		errLine		Строка документа в котором произошла ошибка;
+	int 	errColumn	Столбец документа в котором произошла ошибка;
 ```
 
-``int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes)- записывает все дочерние узлы указанного узла в параметр ссылки узла.``
+int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes)- записывает все дочерние узлы указанного узла в параметр ссылки узла.
 ```
 int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes);
-	unsigned doc - Идентификатор документа (например из функции int xmlOpenDocument)
-	unsigned node - Идентификатор узла
-	dyn_uint &nodes - Дочерние узлы. (возвращаемый параметр)
+	unsigned 	doc			Идентификатор документа (например из функции int xmlOpenDocument)
+	unsigned 	node		Идентификатор узла
+	dyn_uint 	&nodes		Дочерние узлы. (возвращаемый параметр)
 	
-	Example: int k = xmlChildNodes(docNum,Pnode,nodes);
+Example: int k = xmlChildNodes(docNum,Pnode,nodes);
 ```
-int xmlChildNodes()
-Записывает все дочерние узлы указанного узла в параметр ссылки узла
-```
-int xmlChildNodes()
-unsigned doc		Идентификатор документа, возвращаемый, например, xmlNewDocument().
-unsigned node		Идентификатор узла.
-dyn_uint &nodes		Дочерние узлы (возвращаемый параметр).
 
-В случае успешной записи 0. В случае возникновения ошибок функция возвращает -1
 ```
 xmlGetNodeName()
 ```
