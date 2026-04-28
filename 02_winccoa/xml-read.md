@@ -77,11 +77,19 @@ XML_TEXT_NODE					Строка "#text"
 
 
 
-__xmlGetElementAttribute()__
+__int xmlGetElementAttribute(unsigned doc, unsigned node, string attr, string &value);__
+Считывает значение указанного атрибута в значение параметра ссылки узла.
 ```
+int xmlGetElementAttribute(unsigned doc, unsigned node, string attr, string &value);
+	unsigned	doc		Идентификатор документа, возвращаемый, например xmlNewDocument
+	unsigned	node	Идентификатор узла
+	string		attr	Атрибут, значение которого считывается
+	string		&value	Значение атрибута (возвращаемый параметр)
 ```
-xmlCloseDocument()
+__int xmlCloseDocument(unsigned doc)__
+Закрывает созданный(открытый) документ и освобождает занятую область памяти. После этого вызова идентификатор документа больше не действителен.
 ```
+	unsigned 	doc		Идентификатор документа
 ```
 
 Правильнее использовать:
