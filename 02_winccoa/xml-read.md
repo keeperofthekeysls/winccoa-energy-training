@@ -6,13 +6,11 @@ SCL — это XML-файл, поэтому в WinCC OA нужен разбор 
 
 Тема → парсинг SCL/XML
 
-Что изучить →
-
+Что изучить → 
 структура XML
 элементы и атрибуты
 дерево XML
 поиск узлов Substation, VoltageLevel, Bay, ConductingEquipment, Terminal, ConnectivityNode
-
 
 
 Функции WinCC OA посмотреть →
@@ -39,7 +37,13 @@ int xmlChildNodes(unsigned doc, unsigned node, dyn_uint &nodes);
 	
 Example: int k = xmlChildNodes(docNum,Pnode,nodes);
 ```
-
+__int xmlFirstChild(unsigned doc[, unsigned node]);__
+Возвращает все внутренние идентификаторы в первый дочерний узел DOM
+```
+int xmlFirstChild(unsigned doc[, unsigned node]);
+unsigned		doc		Идентификатор документа
+unsigned		node	Необязательный параметр. Узел, идентификатор дочернего узла которого подлежит возврату. В случае отсутствия аргумента узла, параметр возвращает корневой узел дерева.
+```
 __string xmlNodeName(unsigned doc, unsigned node)__
 
 Возвращает имя узла.
